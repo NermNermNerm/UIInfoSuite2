@@ -132,7 +132,7 @@ namespace UIInfoSuite2.UIElements
                 }
 
                 StringBuilder builder = new StringBuilder();
-
+                builder.AppendLine(string.Format(_helper.SafeGetString("Capacity"),currentTileBuilding.GetBuildingChest("Input").Items.Sum(x=> x.Stack),currentTileBuilding.GetBuildingChest("Input").GetActualCapacity() * 999));
                if (wheatCount > 0)
                     builder.Append($"{ItemRegistry.GetData("(O)262").DisplayName}:{wheatCount}");
 
